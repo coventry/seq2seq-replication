@@ -19,6 +19,7 @@ python -m bin.train \
       ./example_configs/nmt_small.yml,
       ./example_configs/train_seq2seq.yml,
       ./example_configs/text_metrics_bpe.yml" \
+           --schedule "continuous_train_and_eval" \
 	   --model_params "
       vocab_source: $VOCAB_SOURCE
       vocab_target: $VOCAB_TARGET" \

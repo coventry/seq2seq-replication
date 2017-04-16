@@ -26,6 +26,6 @@ sudo dpkg -i /tmp/nvidia-docker*.deb
 # Load the drivers.  Happens automatically on reboot, but not on install
 sudo nvidia-modprobe -u -c=0
 
-docker build -t seq2seq-replication .
+docker build -t seq2seq-replication-fix .
 
-nvidia-docker run -it -v ~/wmt:/wmt seq2seq-replication bash process.sh
+nvidia-docker run -it -v ~/wmt:/wmt seq2seq-replication-fix bash process.sh
